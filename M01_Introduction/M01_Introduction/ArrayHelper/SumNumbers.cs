@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Diagnostics;
 
 namespace ArrayHelper
 {
@@ -8,6 +6,8 @@ namespace ArrayHelper
     {
         public static int SumPositiveNumbers(int[,] array)
         {
+            Debug.Assert (array.Length != 0, "Empty array");
+
             int sum = 0;
             for (int i = 0; i < array.GetLength(0); i++)
             {

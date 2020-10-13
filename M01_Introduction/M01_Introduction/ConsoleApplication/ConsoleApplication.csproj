@@ -33,9 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Module, Version=0.0.0.0, Culture=neutral, PublicKeyToken=0b907ff8b8550d4f, processorArchitecture=MSIL">
+    <Reference Include="ApplicationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=5b92037013a7298b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Module\v4.0_0.0.0.0__0b907ff8b8550d4f\Module.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\ApplicationModule\v4.0_0.0.0.0__5b92037013a7298b\ApplicationModule.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml.Linq" />

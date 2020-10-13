@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayHelper", "ArrayHelper\ArrayHelper.csproj", "{1BEC1C12-BCFE-4480-BE66-342CF7F12FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{DE921A75-A581-4523-862A-AF37DC3E32C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RectangleHelper", "RectangleHelper\RectangleHelper.csproj", "{DD6B5DF9-47D1-4EF5-BD91-2178F495EFBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangle", "Rectangle\Rectangle.csproj", "{BF830BE4-1B08-442D-B3DE-6C5C132D64C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BEC1C12-BCFE-4480-BE66-342CF7F12FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BEC1C12-BCFE-4480-BE66-342CF7F12FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BEC1C12-BCFE-4480-BE66-342CF7F12FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BEC1C12-BCFE-4480-BE66-342CF7F12FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE921A75-A581-4523-862A-AF37DC3E32C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE921A75-A581-4523-862A-AF37DC3E32C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE921A75-A581-4523-862A-AF37DC3E32C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE921A75-A581-4523-862A-AF37DC3E32C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD6B5DF9-47D1-4EF5-BD91-2178F495EFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD6B5DF9-47D1-4EF5-BD91-2178F495EFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD6B5DF9-47D1-4EF5-BD91-2178F495EFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD6B5DF9-47D1-4EF5-BD91-2178F495EFBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF830BE4-1B08-442D-B3DE-6C5C132D64C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF830BE4-1B08-442D-B3DE-6C5C132D64C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF830BE4-1B08-442D-B3DE-6C5C132D64C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF830BE4-1B08-442D-B3DE-6C5C132D64C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66F15D08-96F2-4DB4-B84D-6C8C39BCEDE1}
+	EndGlobalSection
+EndGlobal

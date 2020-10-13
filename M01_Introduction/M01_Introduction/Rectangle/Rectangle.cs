@@ -1,8 +1,7 @@
-﻿namespace RectangleHelper
+﻿namespace Rectangle
 {
     public class Rectangle
     {
-
         private readonly float width;
         private readonly float height;
 
@@ -12,14 +11,7 @@
             this.height = height;
         }
 
-        public float Perimeter()
-        {
-            return (width + height) * 2.0f;
-        }
-
-        public float Square()
-        {
-            return width * height;
-        }
+        public float Width => width;
+        public float Height => height;
     }
 }
