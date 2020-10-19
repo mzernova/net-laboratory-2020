@@ -5,27 +5,57 @@ namespace Performance
 {
     class Program
     {
-        static void Main(string[] args)
+        private static C[] createClassesArray()
         {
             var rand = new Random();
-            long memorySize = Process.GetCurrentProcess().PrivateMemorySize64;
-
             var classes = new C[100000];
+
             for (int i = 0; i < classes.Length; i++)
             {
                 classes[i] = new C (rand.Next());
             }
 
-            long classesMemoryDelta = Process.GetCurrentProcess().PrivateMemorySize64 - memorySize;
-            memorySize = Process.GetCurrentProcess().PrivateMemorySize64;
-            Console.WriteLine ("Classes memory delta : " + classesMemoryDelta);
+            return classes;
+        }
 
+        private static S[] createStructsArray()
+        {
+            var rand = new Random();
             var structs = new S[100000];
+
             for (int i = 0; i < structs.Length; i++)
             {
                 structs[i] = new S (rand.Next());
             }
 
+            return structs;
+        }
+
+        private static double calculateClassesTimeDelta (ref C[] classes)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            Array.Sort<C> (classes);
+            return stopwatch.Elapsed.TotalMilliseconds;
+        }
+
+        private static double calculateStructsTimeDelta (ref S[] structs)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            Array.Sort<S> (structs);
+            return stopwatch.Elapsed.TotalMilliseconds;
+        }
+
+        static void Main(string[] args)
+        {
+            long memorySize = Process.GetCurrentProcess().PrivateMemorySize64;
+            C[] classes = createClassesArray();
+            long classesMemoryDelta = Process.GetCurrentProcess().PrivateMemorySize64 - memorySize;
+            Console.WriteLine ("Classes memory delta : " + classesMemoryDelta);
+
+            memorySize = Process.GetCurrentProcess().PrivateMemorySize64;
+            S[] structs = createStructsArray();
             long structsMemoryDelta = Process.GetCurrentProcess().PrivateMemorySize64 - memorySize;
             Console.WriteLine ("Structs memory delta : " + structsMemoryDelta);
 
@@ -38,19 +68,10 @@ namespace Performance
                 Console.WriteLine ("Classes use " + (structsMemoryDelta - classesMemoryDelta) + " bytes less memory than structures");
             }
 
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-
-            Array.Sort<C> (classes);
-
-            double classesTimeDelta = stopwatch.Elapsed.TotalMilliseconds;
-            stopwatch.Restart();
+            double classesTimeDelta = calculateClassesTimeDelta (ref classes);
             Console.WriteLine ("Classes time delta : " + classesTimeDelta);
 
-            Array.Sort<S> (structs);
-
-            double structsTimeDelta = stopwatch.Elapsed.TotalMilliseconds;
-            stopwatch.Stop();
+            double structsTimeDelta = calculateStructsTimeDelta (ref structs);
             Console.WriteLine ("Structures time delta : " + structsTimeDelta);
 
             if (classesTimeDelta > structsTimeDelta)

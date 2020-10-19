@@ -31,6 +31,9 @@ namespace Students
             this.fullName = name + " " + surname;
         }
 
+        public string FullName { get => fullName; }
+        public string Email { get => email; }
+
         public override bool Equals (object obj)
         {
             return obj is Student student
